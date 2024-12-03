@@ -1,0 +1,323 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, Verdana;
+    color:#000;
+}
+
+body {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* General Definitions - Mobile First */
+
+/** Navigationn **/
+header {
+    background-color: #fafafa;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#navigation nav {
+    font-weight: 400;
+    letter-spacing: .05em;
+    padding: 25px;
+  }
+
+ul {
+list-style: none;
+padding-left: 0;
+}
+
+h1 {
+    text-align: center;
+  }
+  
+.top-nav, .top-nav li {
+    width: 100%;
+  }
+  
+h1 a, .top-nav a {
+    color: #000;
+  }
+
+.top-nav li {
+  padding: 10px 0;
+  margin: 5px auto;
+  background-color: #fff;
+}
+
+.top-nav a {
+  text-transform: uppercase;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.intro p {
+    padding: 10px 0;
+    max-width: 400px;
+}
+
+/** Content Definition **/
+
+main {
+    text-transform: uppercase;
+    max-width: 1024px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.content {
+    max-width: 1010px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.col {
+    margin: 10px;
+    min-height: 250px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 5px;
+  }
+
+#portfolio {
+    margin: 40px 0;
+}
+
+.box-1 {
+background-color: #36acd0;
+}
+
+.box-2 {
+background-color: #e0ab27;
+}
+
+.box-3 {
+background-color: #2472aa;
+}
+
+.box-4 {
+background-color: #52bab4;
+}
+
+.box-5 {
+background-color: #675a85;
+}
+
+.box-6 {
+background-color: #626f7e;
+}
+
+.content div {
+    color: #000;
+    text-transform: none;
+}
+
+.col {
+    background-color: #fff;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    padding: 20px auto;
+}
+
+.col h3 {
+    padding: 10px 0px;
+
+}
+
+#contact-container {
+    max-width: 1024px;
+    width: 100%;
+    background-color: #fafafa;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 30px 0 30px;
+}
+
+#contact-container h3 {
+    padding-bottom: 20px;
+}
+
+#contact-container p {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+/** Footer **/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.footer-nav a {
+    text-transform: uppercase;
+}
+
+.full {
+    display: none;
+  }
+
+
+/** Bigger Screen View starting at with of 768px**/
+
+@media (min-width: 768px) {
+
+    /** Navigation **/
+
+    #navigation {
+        position: sticky; 
+        top: 0; 
+        z-index: 10;
+        background-color: #fafafa;
+    }
+
+    .top-nav {
+      margin-top: 0;
+    }
+  
+    .top-nav li {
+      display: inline-block;
+      width: auto;
+      margin-right: 15px;
+      background-color: transparent;
+    }
+  
+    .top-nav li:last-child {
+      margin-right: 0;
+    }
+  
+    .top-nav a {
+      color: #000;
+    }
+
+    .intro {
+        flex-direction: row;
+        padding: 0 20px;
+        text-align: left;
+        align-items: center;
+    }
+
+    .intro img {
+        margin-left: auto;
+        max-width: 50%;
+        order: 2;
+        padding-left: 20px;
+    }
+
+    .intro p {
+        flex: 1;
+        order: 1;  
+        align-self: flex-start;
+
+    }
+
+    /** Container **/ 
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        flex-basis: calc(50% - 20px);
+      }
+
+    /** Footer */
+    .top {
+        display: none;
+      }
+      .full {
+        display: inline-block;
+        margin-left: 20px;
+      }
+  }
+
+
+  
+
+/* Bigger Screen View starting at with of 1024px */
+
+@media (min-width: 1024px) {
+    /** Navigation **/
+  #navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1010px;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+
+  #navigation h1 {
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  .nav {
+    align-items: end;
+    margin: 0;
+  }
+
+  .top-nav, 
+  .top-nav li {
+    width: initial;
+    margin-bottom: 0;
+    display:inline-block;
+  }
+
+  .intro {
+    text-align: left;
+    max-width: 1010px;
+    margin: 0 auto;
+  }
+
+  .intro img {
+    margin-right:0;
+    justify-content: end;
+  }
+
+
+
+  /** Content **/
+  .col {
+    flex-basis: calc(33.333% - 20px);
+  }
+}
