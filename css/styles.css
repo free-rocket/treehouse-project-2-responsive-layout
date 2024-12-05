@@ -287,7 +287,9 @@ footer {
       padding: 0 20px;
       flex-direction: row;
       height: 80px; /* CHANGED: Increased height for better visibility on wide screens */
-  }
+      left: 0;
+      right: 0;
+    }
 
 
   #navigation h1 {
